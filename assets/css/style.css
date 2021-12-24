@@ -6,14 +6,15 @@
 }
 
 :root {
-    --primary-color: #53108a;
-    --secondry-color: #f73808;
-    --tertiary-color: #d1f3e1;
+    --primary-color: #4A8399;
+    --secondary-color: #375666;
+    --tertiary-color: #FFFAF0;
 }
+
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
-    background-color: var(--tertiary-color);
+    background: var(--tertiary-color);
 }
 
 ul {
@@ -24,6 +25,7 @@ a {
     text-decoration: none;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -31,6 +33,7 @@ header {
     padding: 35px 70px;
     align-items: flex-end;
 }
+
 h1 a {
     color: #000;
 }
@@ -44,17 +47,14 @@ header nav ul {
 
 header nav ul li a {
     padding: 5px;
-    color: var(--secondry-color);
+    color: var(--primary-color);
     border-bottom: var(--primary-color) solid 2px;
     margin: 20px;
-    box-shadow: 5px 5px 10px;
-    text-decoration: underline;
 }
 
-header nav ul li a:hover {
-    border-bottom: none;
+header nav ul li a:hover  {
+    border-bottom : none;
     color: #000;
-    
 }
 
 section {
@@ -62,11 +62,11 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    box-shadow: 2px 2px 5px;
 }
 
+
 .hero {
-    /* background: */
+    background: url(../css/image/istanbul.jpg);
     width: 100%;
     background-attachment: fixed;
     display: flex;
@@ -76,8 +76,7 @@ section {
 
 .hero img {
     width: 150px;
-    box-shadow: 5px 5px 10px;
-} 
+}
 
 .picture {
     width: 100%;
@@ -85,8 +84,9 @@ section {
 }
 
 .hero h2 {
-    color: var(--tertiary-color);
+    color: var(--tertiary-color);  
 }
+
 
 .title {
     flex: 1 20%;
@@ -97,27 +97,32 @@ section {
 
 .title h2 {
     font-size: xx-large;
-    color: var(--secondry-color);
-    border-right: var(--secondry-color) solid 3px;
+    color: var(--secondary-color);
+    border-right: var(--secondary-color) solid 3px;
     padding: 0 15px;
     text-align: right;
 }
+
 .content {
     flex: 2 70%;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 2%;
+    
+    margin-left: 2%
 }
+
 .about p {
     margin-bottom: 15px;
 }
 
+/* Work */
 .work .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 50px;
     grid-gap: 20px;
 }
+
 .work .content a {
     display: flex;
     grid-column: span 2;
@@ -127,6 +132,7 @@ section {
     position: relative;
     align-items: flex-end;
 }
+
 .work .content a:first-child {
     grid-column: 1 / span 4;
     grid-row: 1 / span 4;
@@ -141,10 +147,42 @@ section {
     top: 0;
     left: 0;
     opacity: 0.4;
-    transition:  opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
 }
+
 .work a:hover::after {
     opacity: 0;
+}
+
+a.note-taker {
+    background-image: url(../css/image/notetaker1.jpg);
+}
+
+a.code-quiz {
+    background-image: url(../css/image/codeQuiz.jpg);
+}
+
+a.team-profile-generator {
+    background-image: url(../css/image/tpg.jpg);
+}
+
+a.password-generator {
+    background-image: url(../css/image/passwordGenerator.jpg);
+}
+
+a.work-day-scheduler {
+    background-image: url(../css/image/WorkDayScheduler.jpg);
+}
+
+
+
+
+.work-topic {
+    background: var(--primary-color);
+    padding: 4px 12px;
+    z-index: 1;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .work-topic h3, .work-topic p {
@@ -159,7 +197,7 @@ section {
     font-size: 9pt;
 }
 
-
+/* Footer/Contact Me */
 .contact ul {
     display: flex;
     flex-wrap: wrap;
@@ -172,7 +210,6 @@ section {
     color: var(--secondary-color);
     border-bottom: var(--secondary-color) solid 2px;
     margin: 0 20px;
-    box-shadow: 1px 1px 2px;
 }
 
 .contact ul li a:hover  {
@@ -181,3 +218,74 @@ section {
 }
 
 
+/*** MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER ***/
+/* this will be applied on any screen smaller than 980px */
+@media screen and (max-width: 980px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav ul {
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/*** MEDIA QUERY FOR TABLETS AND SMALLER ***/
+/* this will be applied on any screen between 768px and 575px */
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .title {
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    .title h2 {
+        border-bottom: var(--secondary-color) solid 3px;
+        border-right: none;
+        margin-bottom: 15px;
+    }
+}
+
+/*** MEDIA QUERY FOR MOBILE PHONES AND SMALLER ***/
+/* this will be applied on any screen smaller than 575px */
+@media screen and (max-width: 575px) {
+    header h1{
+        font-size: 1rem;
+    }
+
+    header nav ul li a {
+        margin: 10px;
+    }
+
+    .work .content {
+        grid-template-columns: 1fr 1fr;
+        grid-gap : 5px 0;
+    }
+
+    .work .content a {
+        grid-column: 1 / span 2;
+    }
+
+    .work-topic h3 {
+        font-size: 9pt;
+    }
+    
+    .work-topic p {
+        font-size: 7pt;
+    }
+
+    .contact ul li a {
+        margin: 0 10px;
+    }
+}
