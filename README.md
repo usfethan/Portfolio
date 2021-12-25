@@ -1,4 +1,6 @@
 # portfolio
 
 https://usfethan.github.io/portfolio/ 
- <img width="923" alt="portfolioScrnSht" src="https://user-images.githubusercontent.com/77454834/139519536-db02323a-2c5d-4007-a31d-7eeea1e340e2.png">
+
+![portfolioscrnsht1](https://user-images.githubusercontent.com/77454834/147387632-07a4c710-e587-48e6-ade2-b750c31a96c4.jpg)
+![portfolioscrnsht2](https://user-images.githubusercontent.com/77454834/147387633-898f333b-4eba-49c3-a446-63b35cacfb4b.jpg)
