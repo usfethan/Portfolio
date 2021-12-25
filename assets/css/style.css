@@ -154,6 +154,10 @@ section {
     opacity: 0;
 }
 
+a.foodie {
+    background-image: url(../css/image/foodie.jpg);
+}
+
 a.note-taker {
     background-image: url(../css/image/notetaker1.jpg);
 }
